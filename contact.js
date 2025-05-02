@@ -10,16 +10,12 @@ document.addEventListener('DOMContentLoaded', function() {
             ? '<i class="fas fa-times"></i>' 
             : '<i class="fas fa-bars"></i>';
     });
-
-    // Load saved form data if exists
+    
     const contactForm = document.getElementById('contact-form');
     loadFormData();
-
-    // Form submission
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        
-        // Get form values
+    
         const formData = {
             name: document.getElementById('name').value,
             email: document.getElementById('email').value,
@@ -42,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Logout functionality
     const logoutBtn = document.getElementById('logout-btn');
     logoutBtn.addEventListener('click', function() {
-        // In a real app, you would handle proper logout logic here
+        //  you will properly logout logic here
         alert('You have been logged out. Redirecting to home page...');
         window.location.href = 'index.html';
     });
