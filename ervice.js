@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // SEARCH FUNCTIONALITY
+    
     const searchInput = document.getElementById('search-input');
     const searchBtn = document.getElementById('search-btn');
     const eventCards = document.querySelectorAll('.event-card');
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   
-    // CATEGORY FILTER
+    
     const categoryButtons = document.querySelectorAll('.category-btn');
     categoryButtons.forEach(button => {
       button.addEventListener('click', () => {
@@ -27,7 +27,6 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   
-    // BOOKING FUNCTIONALITY
     const attachBookListeners = () => {
       const bookButtons = document.querySelectorAll('.book-btn');
       bookButtons.forEach(button => {
@@ -38,8 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     };
     attachBookListeners();
-  
-    // CREATE EVENT FUNCTIONALITY
+
     const eventForm = document.getElementById('event-form');
     const eventsGrid = document.querySelector('.events-grid');
   
