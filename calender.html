@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Calendar</title>
+    <link rel="stylesheet" href="calender.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">Event Tracker</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main class="calendar-page">
+        <!-- Search Section -->
+        <section class="calendar-search">
+            <div class="search-container">
+                <input type="text" placeholder="Search events..." id="calendar-search">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </section>
+
+        <!-- Category Filter -->
+        <section class="calendar-categories">
+            <div class="category-buttons">
+                <button class="category-btn active" data-category="all">All Events</button>
+                <button class="category-btn" data-category="upcoming">Upcoming</button>
+                <button class="category-btn" data-category="past">Past</button>
+                <button class="category-btn" data-category="personal">Personal</button>
+            </div>
+        </section>
+
+        <!-- Calendar Section -->
+        <section class="calendar-main">
+            <div class="calendar-header">
+                <div class="year-controls">
+                    <button id="prev-year"><i class="fas fa-chevron-left"></i></button>
+                    <span id="current-year">2025</span>
+                    <button id="next-year"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div class="month-controls">
+                    <button id="prev-month"><i class="fas fa-chevron-left"></i> Prev</button>
+                    <h1 id="month-display">Month Year</h1>
+                    <button id="next-month">Next <i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+            
+            <div class="calendar-grid">
+                <div class="day-header">Sun</div>
+                <div class="day-header">Mon</div>
+                <div class="day-header">Tue</div>
+                <div class="day-header">Wed</div>
+                <div class="day-header">Thu</div>
+                <div class="day-header">Fri</div>
+                <div class="day-header">Sat</div>
+                <!-- Days will be inserted here by JavaScript -->
+            </div>
+        </section>
+
+        <!-- Event Section -->
+        <section class="calendar-events">
+            <div class="event-section">
+                <h3>Events for <span id="selected-date">No Date Selected</span></h3>
+                <div id="event-display" class="events-list"></div>
+            </div>
+            
+            <div class="add-event">
+                <textarea placeholder="Add an event for this date" id="new-event"></textarea>
+                <button id="save-event">Save Event</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: Jokaranja26@gmail.com</p>
+                <p>Phone: +254 741838783</p>
+            </div>
+        </div>
+        <p>&copy; 2025 Event Tracker. All rights reserved</p>
+    </footer>
+    
+    <script src="script.js"></script>
+
+</body>
+</html>

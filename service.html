@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Kenyan Event Tracker</title>
+    <link rel="stylesheet" href="service.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">
+            <a href="index.html">Event Tracker</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <!-- Services Header -->
+    <header class="services-header">
+        <h1>Discover Kenyan Events</h1>
+        <p>Find and create unforgettable experiences</p>
+    </header>
+
+    <!-- Search Section -->
+    <section class="search-section">
+        <div class="search-container">
+            <input type="text" placeholder="Search events..." id="search-input">
+            <button id="search-btn"><i class="fas fa-search"></i></button>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <section class="category-section">
+        <h2>Categories</h2>
+        <div class="category-buttons">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="festival">Festivals</button>
+            <button class="category-btn" data-category="sports">Sports</button>
+            <button class="category-btn" data-category="music">Music</button>
+            <button class="category-btn" data-category="cultural">Cultural</button>
+        </div>
+    </section>
+
+    <!-- Featured Events -->
+    <section class="featured-events">
+        <h2>Popular Kenyan Events</h2>
+        <div class="events-grid">
+            <!-- Event 1: ColorFest -->
+            <div class="event-card" data-category="festival">
+                <div class="event-img">
+                   <img src="./color.jpg" alt="Colorfest">
+                    <span class="price">KSh 2,500</span>
+                </div>
+                <div class="event-info">
+                    <h3>ColorFest Kenya</h3>
+                    <p>A vibrant festival of colors, music, and dance in Nairobi.</p>
+                    <div class="event-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 15 Mar 2025</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Nairobi</span>
+                    </div>
+                    <button class="book-btn">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Event 2: Safari Rally -->
+            <div class="event-card" data-category="sports">
+                <div class="event-img">
+                  <img src="./rally.jpg" alt="Safari Rally">
+                    <span class="price">KSh 5,000</span>
+                </div>
+                <div class="event-info">
+                    <h3>Safari Rally</h3>
+                    <p>World-class rally racing through Kenya's rugged terrain.</p>
+                    <div class="event-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 20-25 Jun 2025</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Naivasha</span>
+                    </div>
+                    <button class="book-btn">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Event 3: SummerTides -->
+            <div class="event-card" data-category="music">
+                <div class="event-img">
+                    <img src="./summer.jpg" alt="Summer tides">
+                    <span class="price">KSh 3,800</span>
+                </div>
+                <div class="event-info">
+                    <h3>SummerTides</h3>
+                    <p>Kenya's biggest beach music festival in Mombasa.</p>
+                    <div class="event-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 12 Aug 2025</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Diani Beach</span>
+                    </div>
+                    <button class="book-btn">Book Now</button>
+                </div>
+            </div>
+
+            <!-- Event 4: Sakataboli -->
+            <div class="event-card" data-category="cultural">
+                <div class="event-img">
+                   <img src="./sakataboli.jpg" alt="Sakata Boli">
+                    <span class="price">KSh 1,200</span>
+                </div>
+                <div class="event-info">
+                    <h3>Sakataboli</h3>
+                    <p>Traditional Luhya cultural festival celebrating heritage.</p>
+                    <div class="event-meta">
+                        <span><i class="fas fa-calendar-alt"></i> 5 Oct 2025</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Kakamega</span>
+                    </div>
+                    <button class="book-btn">Book Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Create Event Section -->
+    <section class="create-event">
+        <h2>Create Your Own Event</h2>
+        <form id="event-form">
+            <div class="form-group">
+                <label for="event-name">Event Name</label>
+                <input type="text" id="event-name" placeholder="e.g., Nairobi Food Festival" required>
+            </div>
+            <div class="form-group">
+                <label for="event-category">Category</label>
+                <select id="event-category" required>
+                    <option value="">Select category</option>
+                    <option value="festival">Festival</option>
+                    <option value="sports">Sports</option>
+                    <option value="music">Music</option>
+                    <option value="cultural">Cultural</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="event-date">Date</label>
+                <input type="date" id="event-date" required>
+            </div>
+            <div class="form-group">
+                <label for="event-price">Price (KSh)</label>
+                <input type="number" id="event-price" placeholder="e.g., 1500" required>
+            </div>
+            <button type="submit" class="submit-btn">Create Event</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="service.html">Services</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: Jokaranja26@gmail.com</p>
+                <p>Phone: +254 741838783</p>
+            </div>
+        </div>
+        <p>&copy; 2025 Kenyan Event Tracker. All rights reserved</p>
+    </footer>
+
+    <script src="ervice.js"></script>
+</body>
+</html>
