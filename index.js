@@ -1,20 +1,13 @@
-/**
- * Event Tracker - Main JavaScript File
- * Includes: Authentication, Calendar, and UI Functionality
- */
-
 document.addEventListener('DOMContentLoaded', function() {
-    // ==================== AUTHENTICATION SYSTEM ====================
+   
     const loginForm = document.getElementById('loginForm');
     const logoutBtn = document.getElementById('logout-btn');
     const protectedPages = ['service.html', 'calendar.html', 'contact.html'];
     const currentPage = window.location.pathname.split('/').pop();
 
-    // Check authentication status on page load
     checkAuth();
     updateNavForAuth();
 
-    // Login form submission
     if (loginForm) {
         loginForm.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -23,11 +16,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const password = document.getElementById('password').value;
             
             if (email && password) {
-                // In a real app, you would verify credentials with a server
+              
                 localStorage.setItem('isLoggedIn', 'true');
                 localStorage.setItem('userEmail', email);
-                
-                // Redirect to services page after login
+    
                 window.location.href = 'service.html';
             } else {
                 alert('Please enter both email and password');
@@ -35,7 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Logout functionality
     if (logoutBtn) {
         logoutBtn.addEventListener('click', function() {
             localStorage.removeItem('isLoggedIn');
@@ -44,7 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ==================== CALENDAR FUNCTIONALITY ====================
+  
     if (document.querySelector('.calendar-grid')) {
         // Calendar DOM elements
         const monthDisplay = document.getElementById('month-display');
@@ -230,7 +221,7 @@ document.addEventListener('DOMContentLoaded', function() {
             return `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`;
         }
 
-        // Make deleteEvent function available globally
+      
         window.deleteEvent = function(dateKey, index) {
             if (confirm('Are you sure you want to delete this event?')) {
                 events[dateKey].splice(index, 1);
@@ -246,7 +237,7 @@ document.addEventListener('DOMContentLoaded', function() {
         };
     }
 
-    // ==================== UI FUNCTIONALITY ====================
+  
     // Mobile menu toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
@@ -260,7 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ==================== HELPER FUNCTIONS ====================
+    
     function checkAuth() {
         const isLoggedIn = localStorage.getItem('isLoggedIn') === 'true';
         
